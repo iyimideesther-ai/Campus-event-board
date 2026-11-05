@@ -36,6 +36,7 @@ export default function Home() {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Search events by title..."
+            aria-label="Search events by title"
             className="h-11 rounded-xl border border-slate-300 px-4 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
           />
           <select value={sort} onChange={(event) => setSort(event.target.value)} className="h-11 rounded-xl border border-slate-300 px-3 outline-none">
