@@ -34,5 +34,9 @@ export default function Countdown({ date, time }: { date: string; time: string }
     return () => window.clearInterval(timer);
   }, [date, time]);
 
-  return <div className="rounded-xl bg-indigo-50 px-4 py-3 text-sm font-bold text-indigo-700">{label}</div>;
+  return (
+    <div aria-live="polite" className="rounded-xl bg-indigo-50 px-4 py-3 text-sm font-bold text-indigo-700">
+      {label}
+    </div>
+  );
 }
