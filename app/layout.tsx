@@ -4,8 +4,12 @@ import { EventProvider } from "@/context/EventContext";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Campus Event Board",
-  description: "Discover and save campus events",
+  title: {
+    default: "Campus Event Board",
+    template: "%s | Campus Event Board",
+  },
+  description: "Discover, explore, and save campus events.",
+  keywords: ["campus events", "student events", "tech", "sports", "faith", "social"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
