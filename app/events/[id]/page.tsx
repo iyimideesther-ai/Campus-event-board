@@ -15,6 +15,15 @@ export function generateStaticParams() {
   return events.map((event) => ({ id: event.id }));
 }
 
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const event = events.find((item) => item.id === id);
+  return {
+    title: event?.title ?? "Event Not Found",
+    description: event?.description ?? "The requested campus event could not be found.",
+  };
+}
+
 export default async function EventDetailsPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const event = events.find((item) => item.id === id);
