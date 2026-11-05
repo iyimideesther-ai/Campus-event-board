@@ -39,7 +39,7 @@ export default function Home() {
             aria-label="Search events by title"
             className="h-11 rounded-xl border border-slate-300 px-4 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
           />
-          <select value={sort} onChange={(event) => setSort(event.target.value)} className="h-11 rounded-xl border border-slate-300 px-3 outline-none">
+          <select aria-label="Sort events by date" value={sort} onChange={(event) => setSort(event.target.value)} className="h-11 rounded-xl border border-slate-300 px-3 outline-none">
             <option value="soonest">Soonest first</option>
             <option value="latest">Latest first</option>
           </select>
@@ -52,6 +52,7 @@ export default function Home() {
               key={item}
               type="button"
               onClick={() => setCategory(item)}
+              aria-pressed={category === item}
               className={`rounded-full px-4 py-2 text-sm font-bold transition ${
                 category === item ? "bg-indigo-600 text-white shadow-md" : "border border-slate-200 bg-white text-slate-600 hover:border-indigo-300"
               }`}
