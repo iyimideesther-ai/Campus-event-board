@@ -12,15 +12,24 @@ const EventContext = createContext<EventContextValue | null>(null);
 
 export function EventProvider({ children }: { children: ReactNode }) {
   const [savedIds, setSavedIds] = useState<string[]>([]);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   useEffect(() => {
     const saved = window.localStorage.getItem("campus-saved-events");
-    if (saved) setSavedIds(JSON.parse(saved));
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) setSavedIds(parsed.filter((id): id is string => typeof id === "string"));
+      } catch {
+        window.localStorage.removeItem("campus-saved-events");
+      }
+    }
+    setHasLoaded(true);
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("campus-saved-events", JSON.stringify(savedIds));
-  }, [savedIds]);
+    if (hasLoaded) window.localStorage.setItem("campus-saved-events", JSON.stringify(savedIds));
+  }, [hasLoaded, savedIds]);
 
   const toggleSaved = (id: string) => {
     setSavedIds((current) =>
