@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link href="/" className="flex items-center gap-2 font-bold text-slate-900">
+        <Link href="/" aria-label="Campus Event Board home" className="flex items-center gap-2 font-bold text-slate-900">
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-indigo-600 text-lg text-white">C</span>
           Campus Board
         </Link>
