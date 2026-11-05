@@ -29,7 +29,7 @@ export default function EventCard({ event }: { event: CampusEvent }) {
     <article className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
       <Link href={`/events/${event.id}`} className="block">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={event.image} alt="" className="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
+        <img src={event.image} alt={`${event.title} event`} loading="lazy" className="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
       </Link>
       <div className="p-5">
         <div className="mb-3 flex items-center justify-between">
@@ -48,6 +48,8 @@ export default function EventCard({ event }: { event: CampusEvent }) {
         <button
           type="button"
           onClick={() => toggleSaved(event.id)}
+          aria-pressed={saved}
+          aria-label={saved ? `Remove ${event.title} from saved events` : `Save ${event.title}`}
           className={`mt-4 w-full rounded-xl border px-4 py-2.5 text-sm font-bold transition ${
             saved ? "border-indigo-600 bg-indigo-600 text-white" : "border-slate-300 text-slate-700 hover:border-indigo-600 hover:text-indigo-600"
           }`}
