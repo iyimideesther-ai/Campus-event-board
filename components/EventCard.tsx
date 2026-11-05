@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { useEvents } from "@/context/EventContext";
 
@@ -56,4 +58,3 @@ export default function EventCard({ event }: { event: CampusEvent }) {
     </article>
   );
 }
- "use client";
