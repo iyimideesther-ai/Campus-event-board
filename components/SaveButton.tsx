@@ -9,6 +9,7 @@ export default function SaveButton({ eventId }: { eventId: string }) {
     <button
       type="button"
       onClick={() => toggleSaved(eventId)}
+      aria-pressed={saved}
       className={`w-full rounded-xl px-5 py-3 font-bold transition ${
         saved ? "bg-emerald-600 text-white" : "bg-indigo-600 text-white hover:bg-indigo-700"
       }`}
