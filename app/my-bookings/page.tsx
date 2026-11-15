@@ -94,7 +94,7 @@ export default function MyBookingsPage() {
           <div className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-indigo-50 text-2xl text-indigo-600">✓</div>
           <h2 className="text-xl font-bold text-slate-900">No bookings yet</h2>
           <p className="mt-2 text-slate-500">Reserve a room from the home page to see it here.</p>
-          <Link href="/" className="mt-6 inline-block rounded-xl bg-indigo-600 px-5 py-3 font-bold text-white hover:bg-indigo-700">
+          <Link href="/rooms" className="mt-6 inline-block rounded-xl bg-indigo-600 px-5 py-3 font-bold text-white hover:bg-indigo-700">
             Browse rooms
           </Link>
         </div>

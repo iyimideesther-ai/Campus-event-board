@@ -78,6 +78,13 @@ export default function RoomCard({ room }: { room: Room }) {
             </span>
           ))}
         </div>
+
+        <Link
+          href={`/rooms/${room.id}`}
+          className="mt-5 flex min-h-11 items-center justify-center rounded-xl bg-indigo-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          View room details
+        </Link>
       </div>
     </article>
   );

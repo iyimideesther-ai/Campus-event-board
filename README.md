@@ -1,17 +1,16 @@
-# Campus Room Booking
+# Campus Hub
 
-A responsive campus room booking app built with Next.js, React, and Tailwind CSS.
+A campus app for discovering events and booking shared rooms, built with Next.js, React, and Tailwind CSS.
 
 ## Features
 
-- Browse rooms across campus on the home page
-- Search by room name and filter by building or minimum capacity
-- View a detail page for each room and reserve a seat from a booking form
-- Choose a date and time slot with seat availability checks
-- Enforce a 4-seat limit per slot and block full bookings
-- Track bookings in localStorage so they survive refreshes
-- Cancel reservations from the My Bookings page
-- Empty-state handling for room results and booking history
+- Discover campus events from the home page with search, category filters, and date sorting
+- View event details, countdowns, and save events to My Events
+- Browse rooms at `/rooms` and filter by room name, building, or capacity
+- View room details at `/rooms/[id]` and reserve a seat with date and time selection
+- Enforce a 4-seat limit per time slot and show remaining seats
+- Persist saved events and room bookings in localStorage
+- Cancel reservations from My Bookings
 
 ## Stack
 
@@ -29,6 +28,15 @@ npm run dev
 ```
 
 Open http://localhost:8080 in your browser.
+
+## Routes
+
+- `/` - Event Board
+- `/events/[id]` - Event details
+- `/my-events` - Saved events
+- `/rooms` - Room browser and filters
+- `/rooms/[id]` - Room details and booking form
+- `/my-bookings` - Your room reservations
 
 ## Local development configuration
 

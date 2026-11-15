@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { rooms } from "@/data";
@@ -17,7 +18,21 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   };
 }
 
-export default async function RoomPage({ params }: { params: Promise<{ id: string }> }) {
+export default function RoomPage({ params }: { params: Promise<{ id: string }> }) {
+  return (
+    <Suspense
+      fallback={
+        <main className="mx-auto max-w-6xl px-4 py-10">
+          <p className="text-sm font-medium text-slate-500">Loading room details...</p>
+        </main>
+      }
+    >
+      <RoomPageContent params={params} />
+    </Suspense>
+  );
+}
+
+async function RoomPageContent({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const room = rooms.find((item) => item.id === id);
 
@@ -25,8 +40,8 @@ export default async function RoomPage({ params }: { params: Promise<{ id: strin
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
-      <Link href="/" className="mb-6 inline-flex items-center gap-2 text-sm font-bold text-slate-600 hover:text-indigo-600">
-        ← Back to rooms
+      <Link href="/rooms" className="mb-6 inline-flex items-center gap-2 text-sm font-bold text-slate-600 hover:text-indigo-600">
+        Back to rooms
       </Link>
 
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
