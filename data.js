@@ -1,102 +1,88 @@
-export const events = [
+export const rooms = [
   {
-    id: "1",
-    title: "AI & Machine Learning Hackathon",
-    category: "Tech",
-    date: "2026-11-12",
-    time: "9:00 AM - 5:00 PM",
-    venue: "Innovation Lab, Block A",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-    description: "Build practical AI solutions with mentors, teammates, and real campus datasets."
+    id: "atlas-hub",
+    name: "Atlas Hub",
+    building: "Innovation Center",
+    capacity: 20,
+    amenities: ["4K display", "Whiteboard", "Video calls", "Quick print access"],
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+    timeSlots: [
+      { id: "morning", label: "09:00 AM - 10:00 AM" },
+      { id: "midday", label: "12:00 PM - 1:00 PM" },
+      { id: "afternoon", label: "03:00 PM - 4:00 PM" },
+      { id: "evening", label: "06:00 PM - 7:00 PM" }
+    ]
   },
   {
-    id: "2",
-    title: "Inter-Faculty Football Cup",
-    category: "Sports",
-    date: "2026-11-14",
-    time: "2:00 PM - 6:00 PM",
-    venue: "Main Sports Field",
-    image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=80",
-    description: "Cheer on your faculty teams in an afternoon of spirited campus football."
+    id: "cedar-studio",
+    name: "Cedar Studio",
+    building: "Arts & Media Wing",
+    capacity: 12,
+    amenities: ["Recording booth", "Soundproof walls", "Projector", "Standing desk"],
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+    timeSlots: [
+      { id: "morning", label: "08:30 AM - 9:30 AM" },
+      { id: "midday", label: "11:30 AM - 12:30 PM" },
+      { id: "afternoon", label: "02:30 PM - 3:30 PM" },
+      { id: "evening", label: "05:30 PM - 6:30 PM" }
+    ]
   },
   {
-    id: "3",
-    title: "Interfaith Reflection Evening",
-    category: "Faith",
-    date: "2026-11-18",
-    time: "6:30 PM - 8:30 PM",
-    venue: "Campus Chapel Auditorium",
-    image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1200&q=80",
-    description: "A welcoming evening of conversation, reflection, music, and shared hope."
+    id: "horizon-lab",
+    name: "Horizon Lab",
+    building: "Engineering Block",
+    capacity: 16,
+    amenities: ["Dual monitors", "3D printer", "Conference table", "USB-C docking"],
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    timeSlots: [
+      { id: "morning", label: "09:30 AM - 10:30 AM" },
+      { id: "midday", label: "01:00 PM - 2:00 PM" },
+      { id: "afternoon", label: "04:00 PM - 5:00 PM" },
+      { id: "evening", label: "07:00 PM - 8:00 PM" }
+    ]
   },
   {
-    id: "4",
-    title: "Campus Culture Night",
-    category: "Social",
-    date: "2026-11-20",
-    time: "7:00 PM - 10:00 PM",
-    venue: "Student Centre Courtyard",
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80",
-    description: "Celebrate campus culture with food, performances, art, and live music."
+    id: "maple-seminar",
+    name: "Maple Seminar",
+    building: "Business School",
+    capacity: 24,
+    amenities: ["Presentation screen", "Hybrid setup", "Lecture chairs", "Laptop station"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+    timeSlots: [
+      { id: "morning", label: "10:00 AM - 11:00 AM" },
+      { id: "midday", label: "12:30 PM - 1:30 PM" },
+      { id: "afternoon", label: "03:00 PM - 4:00 PM" },
+      { id: "evening", label: "05:00 PM - 6:00 PM" }
+    ]
   },
   {
-    id: "5",
-    title: "Cybersecurity Awareness Day",
-    category: "Tech",
-    date: "2026-11-24",
-    time: "10:00 AM - 2:00 PM",
-    venue: "Computer Science Auditorium",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80",
-    description: "Learn to defend your data through demos, challenges, and expert talks."
+    id: "north-hall",
+    name: "North Hall",
+    building: "Science Complex",
+    capacity: 18,
+    amenities: ["Smartboard", "Lab benches", "Projector", "Storage lockers"],
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+    timeSlots: [
+      { id: "morning", label: "08:00 AM - 9:00 AM" },
+      { id: "midday", label: "11:00 AM - 12:00 PM" },
+      { id: "afternoon", label: "02:00 PM - 3:00 PM" },
+      { id: "evening", label: "06:30 PM - 7:30 PM" }
+    ]
   },
   {
-    id: "6",
-    title: "Basketball 3x3 Tournament",
-    category: "Sports",
-    date: "2026-11-27",
-    time: "1:00 PM - 5:30 PM",
-    venue: "Indoor Sports Arena",
-    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80",
-    description: "Fast-paced three-on-three basketball with prizes and campus-wide bragging rights."
-  },
-  {
-    id: "7",
-    title: "Community Service Saturday",
-    category: "Social",
-    date: "2026-12-01",
-    time: "8:30 AM - 12:30 PM",
-    venue: "Student Union Plaza",
-    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1200&q=80",
-    description: "Volunteer across local community projects and make a visible difference."
-  },
-  {
-    id: "8",
-    title: "Faith and Purpose Forum",
-    category: "Faith",
-    date: "2026-12-04",
-    time: "5:00 PM - 7:00 PM",
-    venue: "University Lecture Theatre 2",
-    image: "https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=1200&q=80",
-    description: "Hear student stories and join a thoughtful forum about purpose and wellbeing."
-  },
-  {
-    id: "9",
-    title: "Women in Tech Meetup",
-    category: "Tech",
-    date: "2026-12-09",
-    time: "4:00 PM - 6:00 PM",
-    venue: "Engineering Seminar Room",
-    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80",
-    description: "Connect with women in technology through panels, networking, and mentorship."
-  },
-  {
-    id: "10",
-    title: "Athletics Fun Run",
-    category: "Sports",
-    date: "2026-12-12",
-    time: "7:30 AM - 10:30 AM",
-    venue: "East Campus Loop",
-    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=80",
-    description: "Run, walk, or cheer in a friendly community 5K around the east campus loop."
+    id: "quartz-collab",
+    name: "Quartz Collab",
+    building: "Student Center",
+    capacity: 10,
+    amenities: ["Cafe access", "Collaborative tables", "Whiteboard", "Charging stations"],
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+    timeSlots: [
+      { id: "morning", label: "09:00 AM - 10:00 AM" },
+      { id: "midday", label: "01:30 PM - 2:30 PM" },
+      { id: "afternoon", label: "04:30 PM - 5:30 PM" },
+      { id: "evening", label: "07:30 PM - 8:30 PM" }
+    ]
   }
 ];
+
+export const events = rooms;
