@@ -28,7 +28,14 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 in your browser.
+Open http://localhost:8080 in your browser.
+
+## Local development configuration
+
+The app is configured to run on port 8080 by default:
+
+- `npm run dev` → http://localhost:8080
+- `npm run start` → http://localhost:8080
 
 ## Booking rules
 
