@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Campus Event Board",
-    template: "%s | Campus Event Board",
+    default: "Campus Room Booking",
+    template: "%s | Campus Room Booking",
   },
-  description: "Discover, explore, and save campus events.",
-  keywords: ["campus events", "student events", "tech", "sports", "faith", "social"],
+  description: "Find and book campus rooms for study sessions, team meetings, and collaborative work.",
+  keywords: ["campus rooms", "study room booking", "room reservations", "meeting spaces"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
